@@ -17,8 +17,8 @@ public class HealthEntry
     public int Pms { get; set; }      // 0-10
 	public string? OvulationSigns { get; set; }
 
-	public TimeSpan SleepStart { get; set; }
-	public TimeSpan WakeTime { get; set; }
+	public TimeSpan? SleepStart { get; set; }
+	public TimeSpan? WakeTime { get; set; }
 	public double SleepHours { get; set; }
 	public int NightAwakenings { get; set; }
     [Range(1, 10)]
@@ -56,7 +56,7 @@ public class HealthEntry
 
     [Range(0, 10)]
     public int CaffeineCups { get; set; }
-	public TimeSpan LastCaffeineTime { get; set; }
+	public TimeSpan? LastCaffeineTime { get; set; }
 	public bool Alcohol { get; set; }
 	public bool PhysicalActivity { get; set; }
     [Range(0, 10)]
