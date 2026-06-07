@@ -35,38 +35,92 @@
         </select>
     </div>
 
-    <hr />
+        <div>
+        <label>Bleeding</label><br />
+        <input asp-for="Entry.Bleeding" type="number" min="0" max="4"/>
+    </div>
 
+        <div>
+        <label>Cramps</label><br />
+        <input asp-for="Entry.Cramps" type="number" min="0" max="10"/>
+    </div>
+
+        <div>
+        <label>PMS</label><br />
+        <input asp-for="Entry.Pms" type="number" min="0" max="10"/>
+    </div>
+
+    <div>
+        <label>OvulationSigns</label><br />
+        <select asp-for="Entry.OvulationSigns">
+            <option value="">None</option>
+            <option>cervical mucus</option>
+            <option>LH test</option>
+            <option>ovulation pain</option>
+            <option>libido</option>
+            <option>breast tenderness</option>
+            <option>bloating</option>
+            <option>spotting</option>
+            <option>BBT rise</option>
+            <option>other</option>
+        </select>
+    </div>
+
+    <hr />
+        <div>
+        <label>Sleep Start</label><br />
+        <input asp-for="Entry.SleepStart" type="time"/>
+    </div>
+        <div>
+        <label>Wake Time</label><br />
+        <input asp-for="Entry.WakeTime" type="time"/>
+    </div>
     <div>
         <label>Sleep hours</label><br />
         <input asp-for="Entry.SleepHours" type="number" step="0.1" />
     </div>
+    <div>
+        <label>Night Awakenings</label><br />
+        <input asp-for="Entry.NightAwakenings" type="number"/>
+    </div>
 
     <div>
-        <label>Sleep quality 1-10</label><br />
+        <label>Sleep quality</label><br />
         <input asp-for="Entry.SleepQuality" type="number" min="1" max="10" />
+    </div>
+    <div>
+        <label>DeepSleepPercent</label><br />
+        <input asp-for="Entry.DeepSleepPercent" type="number" min="1" max="100" />
     </div>
 
     <hr />
 
     <div>
-        <label>Mood 1-10</label><br />
+        <label>Mood</label><br />
         <input asp-for="Entry.Mood" type="number" min="1" max="10" />
     </div>
 
     <div>
-        <label>Energy 1-10</label><br />
+        <label>Energy</label><br />
         <input asp-for="Entry.Energy" type="number" min="1" max="10" />
     </div>
 
     <div>
-        <label>Anxiety 1-10</label><br />
+        <label>Anxiety</label><br />
         <input asp-for="Entry.Anxiety" type="number" min="1" max="10" />
     </div>
 
     <div>
-        <label>Body pain 0-10</label><br />
-        <input asp-for="Entry.BodyPain" type="number" min="0" max="10" />
+        <label>Irritability</label><br />
+        <input asp-for="Entry.Irritability" type="number" min="1" max="10" />
+    </div>
+    <div>
+        <label>Focus</label><br />
+        <input asp-for="Entry.Focus" type="number" min="1" max="10" />
+    </div>
+    <div>
+        <label>Motivation</label><br />
+        <input asp-for="Entry.Motivation" type="number" min="1" max="10" />
     </div>
 
     <hr />
@@ -92,12 +146,61 @@
         </label>
     </div>
 
+    <hr />
+        <div>
+        <label>Body Pain</label><br />
+        <input asp-for="Entry.BodyPain" type="number" min="0" max="10" />
+    </div>
+            <div>
+        <label>Bloating</label><br />
+        <input asp-for="Entry.Bloating" type="number" min="0" max="10" />
+    </div>
+    </div>
+            <div>
+        <label>Nausea</label><br />
+        <input asp-for="Entry.Nausea" type="number" min="0" max="10" />
+    </div>
+    </div>
+            <div>
+        <label>Appetite</label><br />
+        <input asp-for="Entry.Appetite" type="number" min="0" max="10" />
+    </div>
+            <div>
+        <label>Cravings</label><br />
+        <input asp-for="Entry.Cravings" type="number" min="0" max="10" />
+    </div>
+
+    <hr />
     <div>
         <label>Caffeine cups</label><br />
         <input asp-for="Entry.CaffeineCups" type="number" min="0" />
     </div>
-
+            <div>
+        <label>Last Caffeine Time</label><br />
+        <input asp-for="Entry.LastCaffeineTime" type="time"/>
+    </div>
+        <div>
+    <label>
+        <input asp-for="Entry.Alcohol" type="checkbox" />
+        Alcohol
+    </label>
+    </div>
+        <div>
+    <label>
+        <input asp-for="Entry.PhysicalActivity" type="checkbox" />
+        Physical Activity
+    </label>
+    </div>
+        <div>
+        <label>Stress</label><br />
+        <input asp-for="Entry.Stress" type="number" min="0" max="10" />
+    </div>
+        <div>
+        <label>Unusual Events</label><br />
+        <textarea asp-for="Entry.UnusualEvents" rows="5" style="width: 400px;"></textarea>
+    </div>
     <hr />
+
 
     <div>
     <label>
