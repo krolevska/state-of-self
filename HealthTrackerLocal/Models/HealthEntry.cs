@@ -8,14 +8,14 @@ public class HealthEntry
     public DateTime CreatedAt { get; set; } = DateTime.Now;
 
     public int CycleDay { get; set; }
-	public string CyclePhase { get; set; }
+	public string? CyclePhase { get; set; }
     [Range(0, 4)]
     public int Bleeding { get; set; } // 0-4
     [Range(0, 10)]
     public int Cramps { get; set; }   // 0-10
     [Range(0, 10)]
     public int Pms { get; set; }      // 0-10
-	public string OvulationSigns { get; set; }
+	public string? OvulationSigns { get; set; }
 
 	public TimeSpan SleepStart { get; set; }
 	public TimeSpan WakeTime { get; set; }
@@ -56,15 +56,15 @@ public class HealthEntry
 
     [Range(0, 10)]
     public int CaffeineCups { get; set; }
-	public TimeSpan? LastCaffeineTime { get; set; }
+	public TimeSpan LastCaffeineTime { get; set; }
 	public bool Alcohol { get; set; }
 	public bool PhysicalActivity { get; set; }
     [Range(0, 10)]
     public int Stress { get; set; }      // 1-10
-	public string UnusualEvents { get; set; }
+	public string? UnusualEvents { get; set; }
 
 	public bool DailyMedsTaken { get; set; }
-	public string Supplements { get; set; }
+	public string? Supplements { get; set; }
 
-	public string Notes { get; set; }
+	public string? Notes { get; set; }
 }
