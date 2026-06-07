@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HealthTrackerLocal",
+    "\\HealthTrackerLocal\\Models",
+    "\\HealthTrackerLocal\\Pages",
+    "\\HealthTrackerLocal\\secrets",
+    "\\HealthTrackerLocal\\Services"
+  ],
+  "SelectedNode": "\\HealthTrackerLocal\\Pages\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

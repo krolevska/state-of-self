@@ -1,0 +1,115 @@
+﻿@page
+@model HealthTrackerLocal.Pages.IndexModel
+
+<h1>Health Tracker</h1>
+
+@if (Model.Saved)
+{
+    <div style="padding: 12px; background: #d4edda; margin-bottom: 16px;">
+        Saved successfully.
+    </div>
+}
+
+<form method="post">
+    <div>
+        <label>Date</label><br />
+        <input asp-for="Entry.Date" type="date" />
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Cycle day</label><br />
+        <input asp-for="Entry.CycleDay" type="number" />
+    </div>
+
+    <div>
+        <label>Cycle phase</label><br />
+        <select asp-for="Entry.CyclePhase">
+            <option value="">Not sure</option>
+            <option>Menstrual</option>
+            <option>Follicular</option>
+            <option>Ovulation</option>
+            <option>Luteal</option>
+            <option>PMS</option>
+        </select>
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Sleep hours</label><br />
+        <input asp-for="Entry.SleepHours" type="number" step="0.1" />
+    </div>
+
+    <div>
+        <label>Sleep quality 1-10</label><br />
+        <input asp-for="Entry.SleepQuality" type="number" min="1" max="10" />
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Mood 1-10</label><br />
+        <input asp-for="Entry.Mood" type="number" min="1" max="10" />
+    </div>
+
+    <div>
+        <label>Energy 1-10</label><br />
+        <input asp-for="Entry.Energy" type="number" min="1" max="10" />
+    </div>
+
+    <div>
+        <label>Anxiety 1-10</label><br />
+        <input asp-for="Entry.Anxiety" type="number" min="1" max="10" />
+    </div>
+
+    <div>
+        <label>Pain 0-10</label><br />
+        <input asp-for="Entry.Pain" type="number" min="0" max="10" />
+    </div>
+
+    <hr />
+
+    <div>
+        <label>
+            <input asp-for="Entry.Headache" type="checkbox" />
+            Headache
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input asp-for="Entry.Migraine" type="checkbox" />
+            Migraine
+        </label>
+    </div>
+
+    <div>
+        <label>
+            <input asp-for="Entry.Ibuprofen" type="checkbox" />
+            Ibuprofen
+        </label>
+    </div>
+
+    <div>
+        <label>Caffeine cups</label><br />
+        <input asp-for="Entry.CaffeineCups" type="number" min="0" />
+    </div>
+
+    <hr />
+
+    <div>
+        <label>Medications</label><br />
+        <input asp-for="Entry.Medications" style="width: 400px;" />
+    </div>
+
+    <div>
+        <label>Notes</label><br />
+        <textarea asp-for="Entry.Notes" rows="5" style="width: 400px;"></textarea>
+    </div>
+
+    <br />
+
+    <button type="submit">Save</button>
+</form>
