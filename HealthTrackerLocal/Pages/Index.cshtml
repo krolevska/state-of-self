@@ -65,8 +65,8 @@
     </div>
 
     <div>
-        <label>Pain 0-10</label><br />
-        <input asp-for="Entry.Pain" type="number" min="0" max="10" />
+        <label>Body pain 0-10</label><br />
+        <input asp-for="Entry.BodyPain" type="number" min="0" max="10" />
     </div>
 
     <hr />
@@ -100,8 +100,15 @@
     <hr />
 
     <div>
-        <label>Medications</label><br />
-        <input asp-for="Entry.Medications" style="width: 400px;" />
+    <label>
+        <input asp-for="Entry.DailyMedsTaken" type="checkbox" />
+        Daily meds taken
+    </label>
+    </div>
+
+    <div>
+        <label>Supplements</label><br />
+        <input asp-for="Entry.Supplements" style="width: 400px;" />
     </div>
 
     <div>

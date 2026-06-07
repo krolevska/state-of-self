@@ -41,7 +41,7 @@ public class GoogleSheetsService
 
     public async Task AppendHealthEntryAsync(HealthEntry entry)
     {
-        var range = $"{_sheetName}!A:P";
+        var range = $"{_sheetName}!A:AK";
 
         var row = new List<object?>
         {
@@ -65,9 +65,9 @@ public class GoogleSheetsService
             entry.Irritability,
             entry.Focus,
             entry.Motivation,
-            entry.Headache ? "Yes" : "No",
-            entry.Migraine ? "Yes" : "No",
-            entry.Ibuprofen ? "Yes" : "No",
+            BoolToText(entry.Headache),
+            BoolToText(entry.Migraine),
+            BoolToText(entry.Ibuprofen),
             entry.BodyPain,
             entry.Bloating,
             entry.Nausea,
@@ -75,11 +75,11 @@ public class GoogleSheetsService
             entry.Cravings,
             entry.CaffeineCups,
             entry.LastCaffeineTime?.ToString(@"hh\:mm"),
-            entry.Alcohol ? "Yes" : "No",
-            entry.PhysicalActivity ? "Yes" : "No",
+            BoolToText(entry.Alcohol),
+            BoolToText(entry.PhysicalActivity),
             entry.Stress,
             entry.UnusualEvents,
-            entry.DailyMedsTaken ? "Yes" : "No",
+            BoolToText(entry.DailyMedsTaken),
             entry.Supplements,
             entry.Notes
         };
@@ -102,5 +102,14 @@ public class GoogleSheetsService
             SpreadsheetsResource.ValuesResource.AppendRequest.ValueInputOptionEnum.USERENTERED;
 
         await appendRequest.ExecuteAsync();
+    }
+    private static string BoolToText(bool? value)
+    {
+        return value switch
+        {
+            true => "Yes",
+            false => "No",
+            null => ""
+        };
     }
 }

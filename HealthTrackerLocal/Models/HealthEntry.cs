@@ -63,7 +63,7 @@ public class HealthEntry
     public int? Stress { get; set; }      // 1-10
 	public string? UnusualEvents { get; set; }
 
-	public bool? DailyMedsTaken { get; set; }
+	public bool DailyMedsTaken { get; set; }
 	public string? Supplements { get; set; }
 
 	public string? Notes { get; set; }
